@@ -1,12 +1,13 @@
 {
-  "name": "portfolio",
+  "name": "ai-engineer-portfolio",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "resume": "'/Applications/Google Chrome.app/Contents/MacOS/Google Chrome' --headless=new --disable-gpu --no-pdf-header-footer --virtual-time-budget=8000 --print-to-pdf=public/joseph-reilly-resume.pdf resume/resume.html"
   },
   "dependencies": {
     "next": "16.4.6",

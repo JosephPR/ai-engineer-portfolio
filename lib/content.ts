@@ -14,10 +14,10 @@ export const site = {
   availability: "Available for contract and freelance work",
   links: {
     // TODO: add your links. Empty ones stay hidden.
-    github: "",
-    linkedin: "",
-    resume: "", // e.g. "/resume.pdf" after dropping the file in /public
-    email: "", // shown as a fallback under the contact form
+    github: "https://github.com/JosephPR",
+    linkedin: "https://www.linkedin.com/in/josephpr/",
+    resume: "/joseph-reilly-resume.pdf", // the PDF lives in /public
+    email: "reilly4181@gmail.com", // shown as a fallback under the contact form
   },
 };
 
@@ -144,8 +144,15 @@ export const about = {
     "Now I build the AI systems that take that work on. I founded New Dawn RevOps and built its platform end to end: the agents, the backend, the operator cockpit and the public site.",
     "I care most about the unglamorous parts: approvals, audit logs, permissions and honest reporting. They're what make an agent safe to point at a real business.",
   ],
-  // TODO: add certifications, e.g. "HubSpot CMS for Developers".
-  certifications: [] as string[],
+  // Taken from the résumé PDF. Keep the two in step.
+  certifications: [
+    "AWS Core Services",
+    "HubSpot CMS for Developers I & II: Best Practices",
+    "HubSpot CMS Implementation",
+    "Integrating With HubSpot I: Foundations",
+    "HubSpot CMS for Marketers",
+    "Software Engineering (Flatiron School)",
+  ] as string[],
 };
 
 export const contact = {

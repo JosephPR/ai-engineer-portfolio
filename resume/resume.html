@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Joseph Reilly — AI Automation Engineer</title>
+<!--
+  Source for public/joseph-reilly-resume.pdf.
+  Edit this file, then run `npm run resume` to regenerate the PDF.
+  This is the PUBLIC version: no phone number.
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  @page {
+    size: Letter;
+    margin: 0.6in 0.75in 0.75in;
+    @bottom-left {
+      content: "Joseph Reilly — AI Automation Engineer";
+      font: 8.5pt Roboto, Helvetica, Arial, sans-serif;
+      color: #94a3b8;
+    }
+    @bottom-right {
+      content: "Page " counter(page) " of " counter(pages);
+      font: 8.5pt Roboto, Helvetica, Arial, sans-serif;
+      color: #94a3b8;
+    }
+  }
+
+  :root {
+    --ink: #0f172a;
+    --body: #1e293b;
+    --mute: #475569;
+    --blue: #1d4ed8;
+    --rule: #cbd5e1;
+  }
+
+  * { box-sizing: border-box; }
+
+  html {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  body {
+    margin: 0;
+    font: 9.6pt/1.45 Roboto, Helvetica, Arial, sans-serif;
+    color: var(--body);
+  }
+
+  a { color: var(--blue); text-decoration: none; }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 24pt;
+    padding-bottom: 9pt;
+    border-bottom: 2.25pt solid var(--ink);
+  }
+
+  h1 {
+    margin: 0;
+    font-size: 23pt;
+    line-height: 1.1;
+    letter-spacing: -0.4pt;
+    color: var(--ink);
+  }
+
+  .title {
+    margin: 4pt 0 0;
+    font-size: 11.5pt;
+    font-weight: 700;
+    color: var(--blue);
+  }
+
+  .contact {
+    margin: 0;
+    text-align: right;
+    font-size: 9.2pt;
+    line-height: 1.55;
+    color: var(--body);
+  }
+
+  .summary { margin: 11pt 0 0; }
+
+  h2 {
+    margin: 15pt 0 8pt;
+    padding-bottom: 4pt;
+    border-bottom: 0.75pt solid var(--rule);
+    font-size: 10.2pt;
+    letter-spacing: 1pt;
+    text-transform: uppercase;
+    color: var(--ink);
+    break-after: avoid;
+  }
+
+  /* Skills */
+  .skills {
+    display: grid;
+    grid-template-columns: 118pt 1fr;
+    gap: 6pt 10pt;
+    margin: 0;
+  }
+  .skills dt { font-weight: 700; color: var(--ink); }
+  .skills dd { margin: 0; }
+
+  /* Entries (projects and jobs) */
+  .entry { margin-top: 10pt; break-inside: avoid; }
+  .entry:first-of-type { margin-top: 0; }
+
+  .entry-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 12pt;
+  }
+  .entry-head h3 {
+    margin: 0;
+    font-size: 9.9pt;
+    color: var(--ink);
+  }
+  .entry-head h3 span { color: var(--blue); }
+  .entry-head .aside {
+    flex-shrink: 0;
+    font-size: 9pt;
+    color: var(--mute);
+  }
+
+  .stack {
+    margin: 1.5pt 0 0;
+    font-size: 8.9pt;
+    font-style: italic;
+    color: var(--mute);
+  }
+
+  ul { margin: 4pt 0 0; padding-left: 13pt; }
+  li { margin-top: 2.5pt; }
+  li::marker { color: var(--mute); }
+
+  /* Education */
+  .edu { margin-top: 7pt; break-inside: avoid; }
+  .edu:first-of-type { margin-top: 0; }
+  .edu p { margin: 2pt 0 0; color: var(--mute); }
+
+  /* Certifications */
+  .certs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6pt 12pt;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .certs li {
+    margin: 0;
+    padding: 5pt 9pt;
+    border: 0.75pt solid #e2e8f0;
+    border-left: 2.5pt solid var(--blue);
+    background: #f8fafc;
+    break-inside: avoid;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div>
+    <h1>JOSEPH REILLY</h1>
+    <p class="title">AI Automation Engineer</p>
+  </div>
+  <p class="contact">
+    Denver, CO • <a href="mailto:reilly4181@gmail.com">reilly4181@gmail.com</a><br>
+    <a href="https://github.com/JosephPR">github.com/JosephPR</a> •
+    <a href="https://www.linkedin.com/in/josephpr/">linkedin.com/in/josephpr</a><br>
+    <a href="https://joseph-reilly.vercel.app">joseph-reilly.vercel.app</a> •
+    <a href="https://newdawnrevops.com">newdawnrevops.com</a>
+  </p>
+</header>
+
+<p class="summary">
+  AI Automation Engineer with 7+ years of experience building high-traffic web applications and autonomous AI
+  systems using Python, TypeScript, React, and Next.js. Specializes in architecting multi-agent workflows,
+  integrating LLMs with enterprise CRMs (HubSpot), and building deterministic tool-use pipelines with the Model
+  Context Protocol (MCP) and Google Agent Development Kit (ADK). Proven track record of replacing rigid,
+  rule-based business workflows with scalable, production-grade AI solutions that drive measurable business value.
+</p>
+
+<h2>Technical Skills</h2>
+<dl class="skills">
+  <dt>AI &amp; Agentic Systems:</dt>
+  <dd>Multi-Agent Orchestration, Google Agent Development Kit (ADK), Model Context Protocol (MCP), Zapier MCP,
+    Human-in-the-Loop (HITL) Governance, Structured Outputs (Pydantic), Prompt Engineering, Conversational AI</dd>
+  <dt>Languages &amp; Frontend:</dt>
+  <dd>Python 3.12, TypeScript, JavaScript (ES6+), SQL, React (18/19), Next.js (15/16), Vite, Astro, HTML5, CSS3,
+    Tailwind CSS</dd>
+  <dt>Backend, Data &amp; Cloud:</dt>
+  <dd>FastAPI, Node.js, Express, Google Cloud Firestore, Firebase Auth, PostgreSQL, SQLite, MongoDB, Google Cloud
+    Run, Docker, AWS Core Services, Resend, REST APIs, Git</dd>
+  <dt>CRM &amp; RevOps:</dt>
+  <dd>HubSpot CRM API, Automated Portal Health Auditing, Algorithmic Lead Scoring, Firmographic Enrichment,
+    Predictive Revenue Forecasting, Custom CMS Modules</dd>
+</dl>
+
+<h2>AI &amp; Software Engineering Projects</h2>
+
+<section class="entry">
+  <div class="entry-head">
+    <h3>New Dawn RevOps — <span>Multi-Agent RevOps &amp; CRM Platform</span> (Founder &amp; Sole Engineer)</h3>
+    <a class="aside" href="https://newdawnrevops.com">newdawnrevops.com</a>
+  </div>
+  <p class="stack">Python 3.12, FastAPI, Google ADK, Next.js 15, React, TypeScript, Vite, Cloud Firestore, Firebase
+    Auth, Zapier MCP, SQLite, Google Cloud Run, Docker, Resend</p>
+  <ul>
+    <li><strong>3-Tier Monorepo Architecture:</strong> Engineered a complete B2B AI agency platform uniting a
+      Next.js 15 client storefront and interactive qualification chatbot (public-web), a React/Vite internal staff
+      cockpit (operator-dashboard), and a Python 3.12/FastAPI multi-agent orchestration backend (agent-engine),
+      all deployed to Google Cloud Run.</li>
+    <li><strong>Supervisor Orchestration:</strong> Architected a central "Agency Director" supervisor agent with
+      Google ADK that decomposes complex tasks and routes execution across 10 specialized departmental
+      sub-agents.</li>
+    <li><strong>10-Department Autonomous Execution:</strong> Built departments covering HubSpot CRM syncing,
+      instant portal health audits, CRM cleanup and deduplication, algorithmic lead scoring, firmographic
+      enrichment, predictive revenue forecasting, copywriting/SEO, and CMS publishing.</li>
+    <li><strong>CRM &amp; Tool Integration:</strong> Integrated deeply with the HubSpot CRM API and Zapier MCP
+      (Slack, Gmail, Google Calendar, Sheets) to replace rigid rule-based workflows with dynamic AI
+      reasoning.</li>
+    <li><strong>Human-in-the-Loop (HITL) Governance:</strong> Built a Firebase-authenticated operator dashboard
+      featuring multi-session Agency Director chat, real-time audit logs, agency KPI metrics, and mandatory human
+      approval gates before agents execute email drafts, CRM mutations, or CMS publishing.</li>
+  </ul>
+</section>
+
+<section class="entry">
+  <div class="entry-head">
+    <h3>Modern UI Component Library — <span>Next.js 16 &amp; React 19 Design System</span></h3>
+    <a class="aside" href="https://component-library-714302763548.us-central1.run.app">component-library-714302763548.us-central1.run.app</a>
+  </div>
+  <p class="stack">Next.js 16, React 19, TypeScript, Tailwind CSS, Google Cloud Run</p>
+  <ul>
+    <li>Engineered a customizable, accessible UI component library and template showcase with Next.js 16 and
+      React 19 primitives to accelerate responsive full-stack web application delivery.</li>
+  </ul>
+</section>
+
+<h2>Professional Experience</h2>
+
+<section class="entry">
+  <div class="entry-head">
+    <h3>Domestique — <span>Web Developer</span></h3>
+    <span class="aside">February 2024 – Present</span>
+  </div>
+  <ul>
+    <!-- TODO: the original PDF cut this entry off at a page break. Restore the lost text. -->
+    <li>Architected a reusable UI component library using React and Tailwind CSS, standardizing frontend
+      architecture.</li>
+  </ul>
+</section>
+
+<section class="entry">
+  <div class="entry-head">
+    <h3>Clever Marketing — <span>Web Developer</span></h3>
+    <span class="aside">April 2023 – Present</span>
+  </div>
+  <ul>
+    <li>Developed and maintained full-stack websites, custom CRM integrations, and e-commerce platforms using
+      HubSpot, Shopify, and WordPress.</li>
+    <li>Implemented technical SEO strategies and performance tracking tools to analyze user behavior, increasing
+      organic traffic by 30% and improving search rankings across 10+ client websites.</li>
+    <li>Designed and launched cross-platform, mobile-first web applications in collaboration with
+      cross-functional engineering, design, and marketing teams.</li>
+    <li>Utilized modern design systems and performance monitoring tools to optimize page load speeds, user
+      retention, and conversion pathways.</li>
+  </ul>
+</section>
+
+<section class="entry">
+  <div class="entry-head">
+    <h3>Revenue River Marketing — <span>Frontend Developer</span></h3>
+    <span class="aside">December 2019 – February 2023</span>
+  </div>
+  <ul>
+    <li>Designed and developed customizable, responsive websites, reusable custom modules, landing pages, and
+      email templates on the HubSpot CMS platform.</li>
+    <li>Managed the HubSpot Marketplace portfolio, overseeing all domestic and international template sales while
+      leading technical client onboarding and platform training.</li>
+    <li>Streamlined front-end development workflows by establishing modular template standards across client
+      engineering projects.</li>
+  </ul>
+</section>
+
+<section class="entry">
+  <div class="entry-head">
+    <h3>Trilogy Education — <span>Teacher's Assistant (Coding Bootcamp)</span></h3>
+    <span class="aside">December 2019 – June 2020</span>
+  </div>
+  <ul>
+    <li>Trained bootcamp students in full-stack web development fundamentals (HTML5, CSS3, JavaScript, Node.js,
+      React.js, Git, and Agile methodologies).</li>
+    <li>Led technical code reviews, debugging sessions, and 1-on-1 engineering mentorship to prepare students
+      for software development careers.</li>
+  </ul>
+</section>
+
+<h2>Education</h2>
+
+<section class="edu">
+  <div class="entry-head">
+    <h3>Flatiron School <span style="color:inherit;font-weight:400">(Denver, CO) — Software Engineering Immersive Program</span></h3>
+    <span class="aside">June 2019</span>
+  </div>
+  <p>Full-stack software engineering curriculum covering JavaScript, React, Ruby on Rails, SQL &amp; database
+    design, REST APIs, Git version control, testing, and debugging.</p>
+</section>
+
+<section class="edu">
+  <div class="entry-head">
+    <h3>Kingsborough College <span style="color:inherit;font-weight:400">(Brooklyn, NY) — Associate's Degree in Broadcast Journalism</span></h3>
+  </div>
+</section>
+
+<section class="edu">
+  <div class="entry-head">
+    <h3>Brooklyn College <span style="color:inherit;font-weight:400">(Brooklyn, NY) — Completed Coursework in Broadcasting</span></h3>
+  </div>
+</section>
+
+<h2>Technical Certifications</h2>
+<ul class="certs">
+  <li>AWS Core Services</li>
+  <li>Integrating With HubSpot I: Foundations</li>
+  <li>HubSpot CMS for Developers I &amp; II: Best Practices</li>
+  <li>HubSpot CMS Implementation</li>
+  <li>Software Engineering (Flatiron Curriculum)</li>
+  <li>HubSpot CMS for Marketers</li>
+</ul>
+
+</body>
+</html>
