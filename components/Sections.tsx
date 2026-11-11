@@ -42,61 +42,58 @@ export function Services() {
 
 export function Projects() {
   // Hide the whole section until at least one real project replaces a placeholder.
-  if (projects.every((p) => p.placeholder)) return null;
+  const shown = projects.filter((p) => !p.placeholder);
+  if (shown.length === 0) return null;
 
   return (
     <section id="projects" className="border-t border-line">
       <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6 sm:py-28">
-        <SectionHeader eyebrow="More work" title="Other projects" />
-        <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {projects.map((p, i) => {
-            const body = (
-              <article
-                className={`flex h-full flex-col rounded-xl border p-6 ${
-                  p.placeholder
-                    ? "border-dashed border-white/15 bg-transparent"
-                    : "border-line bg-surface transition-colors hover:border-accent/40"
-                }`}
-              >
-                {p.placeholder && (
-                  <p className="font-mono text-[10px] uppercase tracking-wider text-dim">
-                    Placeholder
-                  </p>
-                )}
-                <h3
-                  className={`mt-2 text-lg font-semibold tracking-tight ${
-                    p.placeholder ? "text-mute" : "text-ink"
-                  }`}
-                >
-                  {p.title}
-                </h3>
-                <p className={`mt-2 text-sm leading-relaxed ${p.placeholder ? "text-dim" : "text-mute"}`}>
-                  {p.body}
+        <SectionHeader eyebrow="More work" title="Other agent systems I've built" />
+        <div className="mt-10 grid gap-4 lg:grid-cols-2">
+          {shown.map((p, i) => (
+            <Reveal key={p.title} delay={i * 80}>
+              <article className="flex h-full flex-col rounded-xl border border-line bg-surface p-6 transition-colors hover:border-accent/40 sm:p-7">
+                <p className="font-mono text-[10px] uppercase tracking-wider text-accent">
+                  {p.kicker}
                 </p>
-                <ul className="mt-auto flex flex-wrap gap-2 pt-5">
-                  {p.tags.map((t, j) => (
-                    <li
-                      key={`${t}-${j}`}
-                      className="rounded-full border border-line px-2.5 py-0.5 font-mono text-[11px] text-dim"
-                    >
-                      {t}
+                <h3 className="mt-2 text-2xl font-semibold tracking-tight">{p.title}</h3>
+                <p className="mt-3 text-sm leading-relaxed text-mute">{p.body}</p>
+                <ul className="mt-5 space-y-2.5 border-t border-line pt-5 text-sm leading-relaxed text-ink/85">
+                  {p.points.map((pt) => (
+                    <li key={pt.slice(0, 32)} className="flex gap-2.5">
+                      <span
+                        className="mt-2 h-1 w-1 shrink-0 rounded-full bg-accent"
+                        aria-hidden="true"
+                      />
+                      {pt}
                     </li>
                   ))}
                 </ul>
-              </article>
-            );
-            return (
-              <Reveal key={p.title} delay={i * 80}>
-                {p.href ? (
-                  <a href={p.href} target="_blank" rel="noopener noreferrer" className="block h-full">
-                    {body}
+                <div className="mt-auto flex flex-wrap items-center gap-2 pt-6">
+                  {p.tags.map((t) => (
+                    <span
+                      key={t}
+                      className="rounded-full border border-line px-2.5 py-0.5 font-mono text-[11px] text-mute"
+                    >
+                      {t}
+                    </span>
+                  ))}
+                </div>
+                {p.href && (
+                  <a
+                    href={p.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-5 inline-flex items-center gap-2 self-start rounded-full border border-line px-4 py-2 text-sm text-ink transition-colors hover:border-accent/60"
+                  >
+                    <span className="h-2 w-2 rounded-full bg-ok" aria-hidden="true" />
+                    {p.linkLabel || "View project"}
+                    <span aria-hidden="true">↗</span>
                   </a>
-                ) : (
-                  body
                 )}
-              </Reveal>
-            );
-          })}
+              </article>
+            </Reveal>
+          ))}
         </div>
       </div>
     </section>

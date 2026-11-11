@@ -111,28 +111,46 @@ export const services = [
   },
 ];
 
-// TODO: replace these three slots with real projects when you've chosen them.
-export const projects = [
+export type Project = {
+  placeholder?: boolean;
+  title: string;
+  kicker: string;
+  body: string;
+  points: string[];
+  tags: string[];
+  href: string; // "" for no link
+  linkLabel: string;
+};
+
+// The section hides itself if every entry is a placeholder.
+export const projects: Project[] = [
   {
-    placeholder: true,
-    title: "Project slot one",
-    body: "A short description of what it does, who it's for and the result.",
-    tags: ["Tag", "Tag"],
+    title: "Dawn Factory",
+    kicker: "Self-improving prospecting pipeline",
+    body: "Four independent agents find local businesses with outdated websites, build each one a redesign, quality-check it in a real browser and draft a personal email. A fifth studies the results and rewrites the others' instructions.",
+    points: [
+      "Agents never call each other. They pass work through a shared job board, so any one can crash, restart or be rewritten alone.",
+      "Guardrails live in code: no send button exists, each agent has a tool allowlist, and a hook stops the builder browsing anything but the prospect's own site.",
+      "A new prompt is adopted only if it beats the old one head to head on past jobs.",
+      "In one logged run, the critic's feedback took a redesign from 72 to 86 out of 100, for $0.40 in model spend.",
+    ],
+    tags: ["Claude Agent SDK", "Python", "Playwright", "SQLite"],
     href: "",
+    linkLabel: "",
   },
   {
-    placeholder: true,
-    title: "Project slot two",
-    body: "A short description of what it does, who it's for and the result.",
-    tags: ["Tag", "Tag"],
-    href: "",
-  },
-  {
-    placeholder: true,
-    title: "Project slot three",
-    body: "A short description of what it does, who it's for and the result.",
-    tags: ["Tag", "Tag"],
-    href: "",
+    title: "BizOps Agent Suite",
+    kicker: "White-label agents for small businesses",
+    body: "A multi-client platform where five agents handle speed-to-lead, quote prep, client reporting, call follow-up and document intake. Each agent is a YAML file, so a new client's portal is configuration, not code.",
+    points: [
+      "Every client gets a separate portal with its own sign-in list, connected accounts and data.",
+      "Anything an agent saves or sends waits for the client's approval, including actions in connected apps.",
+      "Any agent can also run headlessly from a webhook, protected by a per-client secret.",
+      "Automated tests cover portal access, data isolation between clients and the approval gate.",
+    ],
+    tags: ["Google ADK", "FastAPI", "React", "Firestore", "Zapier MCP", "Cloud Run"],
+    href: "https://bizops-agents-1073320994553.us-central1.run.app/",
+    linkLabel: "Live app (invite only)",
   },
 ];
 
